@@ -1,0 +1,19 @@
+{
+// 两个作用，第一个提供nodejs服务端ssr的实现；第二个给include中提供的vite环境的编译
+"extends": "@vue/tsconfig/tsconfig.node.json",
+// 基于node的vite进行打包
+"include": [
+    "vite.config.*",
+    "vitest.config.*",
+    "cypress.config.*",
+    "playwright.config.*"
+],
+"compilerOptions": {
+    // 合成jsconfig.json和jsconfig.node.json文件为一个文件
+    "composite": true,
+    // 基于node环境实现
+    "types": [
+    "node"
+    ]
+}
+}

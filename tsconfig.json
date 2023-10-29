@@ -1,0 +1,23 @@
+{
+"extends": "@vue/tsconfig/tsconfig.json",
+// 告诉TS哪些文件需要编译
+"include": [
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue"
+],
+"compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+    // 此处是配置vscode代码的提示
+    "@/*": [
+        "./src/*"
+    ]
+    }
+},
+"references": [
+    {
+    "path": "./tsconfig.node.json"
+    }
+]
+}
