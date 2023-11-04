@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <div class="m-1">怒号呀</div>
     <Header />
     <Banner />
     <Footer />
@@ -8,9 +7,9 @@
 </template>
 
 <script setup lang="ts">
-import Header from "../components/common/Header.vue";
-import Banner from "../components/common/Banner.vue";
-import Footer from "../components/common/Footer.vue";
+import Header from "../components/home-comm/Header.vue";
+import Banner from "../components/home-comm/Banner.vue";
+import Footer from "../components/home-comm/Footer.vue";
 </script>
 
 <style lang="less" scoped>

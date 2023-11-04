@@ -1,6 +1,6 @@
 <template>
   <div class="error">
-    <h2>error</h2>
+    <h2>页面找不到了！！</h2>
   </div>
 </template>
 
