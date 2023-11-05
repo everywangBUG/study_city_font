@@ -42,6 +42,7 @@ import city from '../../assets/svg/flight-city.svg'
 .items {
   > div {
     padding-left: 30px;
+    cursor: pointer;
   }
 }
 .item {
