@@ -10,12 +10,14 @@
           <span class="text-10px text-center pt-2px">LuffyCity</span>
         </div>
       </div>
-      <div class="flex items">
-        <div>免费课</div>
-        <div>轻课</div>
-        <div>学位课</div>
-        <div>题库</div>
-        <div>study</div>
+      <div class="flex items" v-for="item in getHeaderData.data">
+        <div>
+          <a :href="item.link">
+            <span>
+              {{ item.title }}
+            </span>
+          </a>
+        </div>
       </div>
     </div>
     <div class="flex pr-100px items">
@@ -36,6 +38,10 @@
 <script setup lang="ts">
 import cart from '@/assets/svg/cart.svg'
 import city from '../../assets/svg/flight-city.svg'
+import { getNavHeader } from '../../http/home/home'
+
+const getHeaderData = await getNavHeader()
+console.log(getHeaderData, '111')
 </script>
 
 <style lang="less" scoped>

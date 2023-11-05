@@ -5,3 +5,9 @@ export function getBanner() {
     url: '/banner/'
   })
 }
+
+export function getNavHeader() {
+  return myRequest.get({
+    url: '/navheader/'
+  })
+}

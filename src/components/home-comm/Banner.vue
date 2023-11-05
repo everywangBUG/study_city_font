@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import { getBanner }  from '../../http/banner/banner'
+import { getBanner }  from '../../http/home/home'
 const bannerList = await getBanner()
 console.log(bannerList.data)
 </script>
