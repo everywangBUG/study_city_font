@@ -13,7 +13,7 @@
       <div class="flex items" v-for="item in getHeaderData.data">
         <div>
           <a :href="item.link">
-            <span>
+            <span :class="isactive ? 'item-active' : ''">
               {{ item.title }}
             </span>
           </a>
@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="flex pr-100px items">
-      <div class="flex justify-center align-center">
+      <div class="flex justify-center items-center">
         <div class="w-15px h-15px">
           <img :src="cart" alt="" class="w-full">
         </div>
@@ -36,12 +36,13 @@
 </template>
 
 <script setup lang="ts">
-import cart from '@/assets/svg/cart.svg'
+import cart from '../../assets/svg/cart.svg'
 import city from '../../assets/svg/flight-city.svg'
 import { getNavHeader } from '../../http/home/home'
+import { ref } from 'vue'
 
 const getHeaderData = await getNavHeader()
-console.log(getHeaderData, '111')
+const isactive = ref(false)
 </script>
 
 <style lang="less" scoped>
@@ -65,5 +66,8 @@ console.log(getHeaderData, '111')
     top: 5px;
     left: 4px;
   }
+}
+.item-active {
+  color: #red;
 }
 </style>
