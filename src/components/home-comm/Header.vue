@@ -13,7 +13,7 @@
       <div class="flex items" v-for="item in getHeaderData.data">
         <div>
           <a :href="item.link">
-            <span :class="isactive ? 'item-active' : ''">
+            <span class="item-hover">
               {{ item.title }}
             </span>
           </a>
@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="flex pr-100px items">
-      <div class="flex justify-center items-center">
+      <div class="flex justify-center">
         <div class="w-15px h-15px">
           <img :src="cart" alt="" class="w-full">
         </div>
@@ -42,16 +42,27 @@ import { getNavHeader } from '../../http/home/home'
 import { ref } from 'vue'
 
 const getHeaderData = await getNavHeader()
-const isactive = ref(false)
 </script>
 
 <style lang="less" scoped>
 .items {
   > div {
-    padding-left: 30px;
+    padding-left: 30px; 
     cursor: pointer;
+    position: relative;
   }
-}
+  .item-hover:hover {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 45px;
+      height: 1px;
+      background-color: orange;
+      top: 30px;
+      right: 0;
+    };
+    }
+  }
 .item {
   padding-left: 10px;
   position: relative;
@@ -66,8 +77,5 @@ const isactive = ref(false)
     top: 5px;
     left: 4px;
   }
-}
-.item-active {
-  color: #red;
 }
 </style>

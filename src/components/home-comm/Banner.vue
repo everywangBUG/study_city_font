@@ -11,7 +11,6 @@
 <script setup lang="ts">
 import { getBanner }  from '../../http/home/home'
 const bannerList = await getBanner()
-console.log(bannerList.data)
 </script>
 
 <style lang="less" scoped>

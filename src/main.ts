@@ -1,10 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import './assets/css/index.css'
+import './assets/css/index.less'
 import router from './router/route'
 import 'virtual:uno.css'
 import axios from "axios";
-import './assets/css/global.less'
 // 禁止客户端ajax携带cookie到服务端去
 axios.defaults.withCredentials = false;
 

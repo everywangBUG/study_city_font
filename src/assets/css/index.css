@@ -26,3 +26,13 @@ ins {
 li {
   list-style: none;
 }
+* {
+  font-size: 14px;
+  font-family: "Microsoft YaHei", "微软雅黑", "宋体", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a {
+  color: #000000;
+}
